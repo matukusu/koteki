@@ -1,0 +1,10 @@
+.title_content input{
+    width: 100%;
+    border-color: rgb(231, 147, 147);
+}
+.contact_form_container{
+    height: 40vh;
+}
+.confirm {
+    height: 55dvh;
+}

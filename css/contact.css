@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(238, 199, 199);
+}
+.button{
+    background-color: rgb(68, 28, 28);
+}
+.header_contents{
+    background-color: rgb(68, 28, 28);
+}
+.menu {
+    background-color: rgb(68, 28, 28);
+}
+.select_content{
+    flex-direction: column;
+    border-bottom: solid 1px #dedede;
+    padding-bottom: 15px;
+}
+.select_sort{
+    display: flex;
+    align-items: center;
+}
+.select_content select{
+    width: 100%;
+}
+.select_message{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.select_message label{
+    flex-direction: row;
+    margin: 0;
+}
+.select_message label span{
+    margin-left: 10px;
+}
+.contact_content{
+    margin-top: 0;
+    flex-direction: column;
+}
+.contact_lists{
+    overflow: scroll;
+    height: 50vh;
+    /* display: flex;
+    flex-direction: column; */
+}
+/* .contact_content .reverse{
+    flex-direction: column-reverse;
+} */
+.contact_list{
+    border: solid 1px #dedede;
+    margin: 5px auto!important;
+}
+.unread{
+    border-left: solid 5px #fc8b00;
+    background-color: #ffeed8;
+}
+.replyed{
+    position: relative;
+}
+.replyed::after{
+    content: "送信済";
+    position: absolute;
+    right: 10px;
+    /* top: 43px; */
+    bottom: 20px;
+    padding: 5px;
+    background-color: rgb(68, 28, 28);
+    color: #fff;
+    border-radius: 5px;
+
+}

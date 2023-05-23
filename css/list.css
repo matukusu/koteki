@@ -1,0 +1,12 @@
+.title_content{
+    flex-direction: column;
+}
+.button_content{
+    justify-content: space-around;
+}
+.list_content{
+    flex-direction: column;
+}
+.table{
+    height: calc(100vh - 330px);
+}
