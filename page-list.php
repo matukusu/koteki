@@ -37,7 +37,10 @@ if(!empty($_POST['csv'])) {
     //CSVファイル作成
     $fileName = "test";
 
+    //CSVヘッダー部分
     $header = [];
+    $header[] = '名前';
+    $header[] = '地区';
     foreach ($answers as $answer) {
         if (!isset($answer_id_csv)) {
             $answer_id_csv = $answer['answer_id'];
@@ -53,15 +56,25 @@ if(!empty($_POST['csv'])) {
         }
         $answer_id_csv = $answer['answer_id'];
     }
+    $header[] = '備考';
+
+    //CSVボディ部分
     $i = 0;
+    $csv_remarks;
     foreach ($answers as $answer) {
         //一回目のみ
         if (empty($answer_id)) {
             $answer_id = $answer['answer_id'];
+            $csv_remarks = $answer['answer_remarks'];
+            $records[$i][] = $answer['name'];
+            $records[$i][] = $answer['area'];
         }
         //違ったら次の行
         if ($answer_id != $answer['answer_id']) {
+            $records[$i][] = $csv_remarks;
             $i++;
+            $records[$i][] = $answer['name'];
+            $records[$i][] = $answer['area'];
         }
         $answer_id = $answer['answer_id'];
 
